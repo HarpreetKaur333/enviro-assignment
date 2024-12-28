@@ -15,9 +15,15 @@ _**1. Get weather forecasts for a city using the OpenWeatherMap API.**_
 - Filter based on periods like morning, evening, and midnight.  
 
 
- -API Integration: Weather data (weatherApi.ts) is fetched from the OpenWeatherMap API using Axios. API-related logic is organized in src/api/weatherApi.ts.
- -Components: Header and Footer are reusable components for the application layout. WeatherForecast (WeatherForecast.tsx) handles the weather functionality, including search, display, and error handling.
- -Interfaces: Defined in src/interface/ for strong typing (e.g., WeatherEntry.ts).
+- **API Integration**: Weather data (`weatherApi.ts`) is fetched from the OpenWeatherMap API using Axios.  
+  API-related logic is organized in `src/api/weatherApi.ts`.  
+
+- **Components**:  
+  - `Header` and `Footer`: Reusable components for the application layout.  
+  - `WeatherForecast (WeatherForecast.tsx)`: Handles the weather functionality, including search, display, and error handling.  
+
+- **Interfaces**: Defined in `src/interface/` for strong typing (e.g., `WeatherEntry.ts`).  
+
 
 
 **_2. Visualize and validate JSON data in a hierarchical, collapsible structure._**
