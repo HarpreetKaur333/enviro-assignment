@@ -2,10 +2,11 @@
 
 Enviro-Assignment:This project (Assignment Code) is a simple weather forecast and JSON visualization tool built using React and TypeScript. It allows users to:
 
--**React and TypeScript**: Used for its strong typing and component-based architecture.
--**Axios**: Chosen for handling API requests quickly and efficiently.
--**Vite**: Preferred for fast builds and a smooth development experience.
--**OpenWeatherMap API**: Provides reliable weather data.
+- **React and TypeScript**: Used for its strong typing and component-based architecture.  
+- **Axios**: Chosen for handling API requests quickly and efficiently.  
+- **Vite**: Preferred for fast builds and a smooth development experience.  
+- **OpenWeatherMap API**: Provides reliable weather data.  
+
 
 _**1. Get weather forecasts for a city using the OpenWeatherMap API.**_  
 - 5-Day / 3-Hour Forecast using Free API [OpenWeatherMap Forecast](https://openweathermap.org/forecast5)  
