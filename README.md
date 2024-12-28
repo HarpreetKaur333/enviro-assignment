@@ -1,83 +1,51 @@
-React + TypeScript + Vite
+# React + TypeScript + Vite
+
 Enviro-Assignment
-This project is a simple weather forecast and JSON visualization tool built using React and TypeScript. It allows users to:
+This project (Assignment Code) is a simple weather forecast and JSON visualization tool built using React and TypeScript. It allows users to:
 
-React and TypeScript: Used for its strong typing and component-based architecture.
-Axios: Chosen for handling API requests quickly and efficiently.
-Vite: Preferred for fast builds and a smooth development experience.
-OpenWeatherMap API: Provides reliable weather data.
-Features
-1. Weather Forecast
-Get weather forecasts for a city using the OpenWeatherMap API.
-API Used: 5-Day / 3-Hour Forecast Free API.
-Key Functionalities:
-Search for weather data for any city.
-Display a 5-day weather forecast with key details like temperature and conditions.
-Filter forecasts by periods like morning, evening, and midnight.
-Code Structure
-API Integration:
+-**React and TypeScript**: Used for its strong typing and component-based architecture.
+-**Axios**: Chosen for handling API requests quickly and efficiently.
+-**Vite**: Preferred for fast builds and a smooth development experience.
+-**OpenWeatherMap API**: Provides reliable weather data.
 
-Weather data (weatherApi.ts) is fetched from the OpenWeatherMap API using Axios.
-API-related logic is organized in src/api/weatherApi.ts.
-Components:
+_**1. Get weather forecasts for a city using the OpenWeatherMap API. **_
+  -5-Day / 3-Hour Forecast using Free API https://openweathermap.org/forecast5
+  -Search for weather data for any city.
+  -Displays a 5-day weather forecast with key details like temperature and conditions.
+  -Filter based on periods like morning, evening, and midnight
 
-Header and Footer: Reusable components for the application layout.
-WeatherForecast (WeatherForecast.tsx): Handles weather functionality, including search, display, and error handling.
-Interfaces:
+ API Integration: Weather data (weatherApi.ts) is fetched from the OpenWeatherMap API using Axios. API-related logic is organized in src/api/weatherApi.ts.
+ Components: Header and Footer are reusable components for the application layout. WeatherForecast (WeatherForecast.tsx) handles the weather functionality, including search, display, and error handling.
+ Interfaces: Defined in src/interface/ for strong typing (e.g., WeatherEntry.ts).
 
-Defined in src/interface/ for strong typing (e.g., WeatherEntry.ts).
-2. JSON Visualization and Validation
-Visualize and validate JSON data in a hierarchical, collapsible structure.
-JSONVisualizer Component (JSONVisualizer.tsx):
-Allows users to upload, validate, and view JSON data hierarchically.
-Paste or upload JSON data to view it in a collapsible format.
-Validates JSON and displays error messages for invalid input.
-Deployment
-Steps to Run Locally
-Clone the Repository:
 
-bash
-Copy code
-git clone https://github.com/HarpreetKaur333/enviro-assignment.git
-Install Dependencies:
+**_2. Visualize and validate JSON data in a hierarchical, collapsible structure._**
+  -JSONVisualizer (Component JSONVisualizer.tsx) allows users to upload, validate, and view JSON data hierarchically.
+  -Paste or upload JSON data to view it in a collapsible format.
+  -Validates JSON and displays error messages for invalid input.
 
-bash
-Copy code
-npm install
-Start the Development Server:
 
-bash
-Copy code
-npm run dev
-Open your browser and navigate to:
 
-arduino
-Copy code
-http://localhost:3000
-Steps to Deploy to GitHub Pages
-Open the vite.config.ts file and ensure the base is set to the repository name:
+This project is designed to focus on clarity and usability, making it a great learning experience for developers.
 
-ts
-Copy code
-base: '/enviro-assignment/'
-Build the project:
+**Deployment to GitHub Pages
+Steps to Deploy**
+  Node.js (v14 or higher) and npm (npm v 10.2.4, Node v20.11.1)
 
-bash
-Copy code
-npm run build
-Deploy to GitHub Pages using the gh-pages package:
+**Steps to Run Locally**
+ -Clone the Repository: git clone https://github.com/HarpreetKaur333/enviro-assignment.git
+ -Install Dependencies: Npm Install
+ -Start the Development Server: npm run dev
+ -Open your browser and navigate to http://localhost:3000
 
-bash
-Copy code
-npm run deploy
-Go to your repository settings on GitHub:
+**Deployment to GitHub Pages
+Steps to Deploy**
+  -Open the vite.config.ts file and ensure the base is set to the repository name: for example, in my case _ **base: '/enviro-assignment/' **_
+  -Build the project: npm run build
+  -Deploy to GitHub Pages using the gh-pages package: npm run deploy
+  -Go to your repository settings on GitHub: Setiings->Pages , Under the source select "gh-pages" as Branch
+  -the project will be live at : **https://HarpreetKaur333.github.io/enviro-assignment/**
 
-Navigate to Settings > Pages.
-Under the "Source", select gh-pages as the branch.
-Your project will be live at:
+readme file 
 
-arduino
-Copy code
-https://HarpreetKaur333.github.io/enviro-assignment/
-Summary
-This project is designed with a focus on clarity and usability, making it a great learning experience for developers. It provides hands-on experience with integrating APIs, building reusable components, and deploying to GitHub Pages.
+make better and show content in new line 
