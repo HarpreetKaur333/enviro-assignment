@@ -43,7 +43,7 @@ This project is designed to focus on clarity and usability, making it a great le
  - Clone the Repository: git clone https://github.com/HarpreetKaur333/enviro-assignment.git
 - Install Dependencies: Npm Install
  - Start the Development Server: npm run dev
-- Open your browser and navigate to http://localhost:3000
+- Open your browser and navigate to [http://localhost:3000](http://localhost:3000/enviro-assignment/)
 
 **_Deployment to GitHub Pages_**  
 
