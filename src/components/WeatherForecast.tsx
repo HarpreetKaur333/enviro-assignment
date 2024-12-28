@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { getWeatherData } from "../api/weatherApi";
-import { WeatherEntry } from "../interface/WeatherEntry";
+import { WeatherEntry, ApiResponse } from "../interface/WeatherEntry";
 import axios from "axios";
 
 const WeatherForecast: React.FC = () => {
@@ -11,71 +11,64 @@ const WeatherForecast: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>("All");
   const [currentPage, setCurrentPage] = useState<number>(0);
 
-  const recordsPerPage = 5;
+  const recordsPerPage = 6;
 
-  // Fetch weather data
   const fetchWeather = async () => {
     try {
       setError("");
-      const data = await getWeatherData(city);
+      const data: ApiResponse = await getWeatherData(city);
 
-      // Process data to group by day and time
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const processedData = data.list.map((entry: any) => ({
-        date: new Date(entry.dt * 1000).toLocaleDateString("en-US", {
-          weekday: "long",
-        }),
-        time: new Date(entry.dt * 1000).toLocaleTimeString("en-US", {
-          hour: "2-digit",
-          minute: "2-digit",
-          hour12: false, // Use 24-hour format for easier filtering
-        }),
-        temp: Math.round(entry.main.temp),
-        condition: entry.weather[0].description,
+        date: new Date(entry.dt * 1000).toDateString().split(" ")[0], 
+        time: new Date(entry.dt * 1000).toTimeString().slice(0, 5), 
+        tempHigh: Math.round(entry.main.temp_max), 
+        tempLow: Math.round(entry.main.temp_min), 
+        feelsLike: Math.round(entry.main.feels_like), 
+        windSpeed: entry.wind.speed,
+        humidity: entry.main.humidity,
+        visibility: entry.visibility / 1000,  
+        condition: entry.weather[0].description || "Unknow",
       }));
 
       setForecastData(processedData);
-      setFilteredData(processedData); // Initialize filtered data with all data
-      setCurrentPage(0); // Reset pagination
+      setFilteredData(processedData); 
+      setCurrentPage(0); 
     } catch (error) {
-      // Check if the error is an instance of AxiosError (if using Axios)
       if (axios.isAxiosError(error) && error.response) {
-        setError(`API Error: ${error.response.data.message}`);
+        setError(`Failed to fetch weather data ${error.response.data.message}`);
       } else if (error instanceof Error) {
-        // If the error has a message property
         setError(error.message);
       } else {
-        setError("Unknown error occurred.");
+        setError("Failed to fetch weather data.");
       }
     }
   };
 
-  // Handle filter change
+
   const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const filter = e.target.value;
     setSelectedFilter(filter);
 
-    // Filter data by time interval
     const filtered = forecastData.filter((item) => {
-      const timeHour = new Date(`1970-01-01T${item.time}`).getHours(); // Extract hour
+      const timeHour = new Date(`1970-01-01T${item.time}`).getHours(); 
       if (filter === "Morning") return timeHour >= 6 && timeHour < 12;
       if (filter === "Afternoon") return timeHour >= 12 && timeHour < 18;
       if (filter === "Evening") return timeHour >= 18 && timeHour < 24;
       if (filter === "Night") return timeHour >= 0 && timeHour < 6;
-      return true; // Default to "All"
+      return true; 
     });
 
     setFilteredData(filtered);
-    setCurrentPage(0); // Reset pagination
+    setCurrentPage(0); 
   };
 
-  // Paginate filtered data
+
   const paginatedData = filteredData.slice(
     currentPage * recordsPerPage,
     currentPage * recordsPerPage + recordsPerPage
   );
 
-  // Handle pagination
   const handleNextPage = () => {
     if ((currentPage + 1) * recordsPerPage < filteredData.length) {
       setCurrentPage(currentPage + 1);
@@ -104,9 +97,7 @@ const WeatherForecast: React.FC = () => {
 
       {filteredData.length > 0 && (
         <>
-          <h3>5-Day Weather Forecast</h3>
-
-          {/* Filter Dropdown */}
+        <div className="displayData">
           <div className="filter-container">
             <label htmlFor="timeFilter">Filter by Time: </label>
             <select
@@ -122,19 +113,25 @@ const WeatherForecast: React.FC = () => {
             </select>
           </div>
 
-          {/* Forecast Table */}
+
           <div className="forecast-container">
             {paginatedData.map((item, index) => (
-              <div className="forecast-item" key={index}>
-                <p>{item.date}</p>
-                <p>{item.time}</p>
-                <p>{item.temp}°C</p>
-                <p>{item.condition}</p>
-              </div>
+             <div className="forecast-item" key={index}>
+             <p><strong>{item.date}</strong></p>
+             <p>Time: {item.time}</p>
+             <p>
+               Temperature: H: {item.tempHigh}°C L: {item.tempLow}°C 
+               (<span>Feels Like: {item.feelsLike}°C</span>)
+             </p>
+             <p>Wind Speed: {item.windSpeed} m/s</p>
+             <p>Humidity: {item.humidity}%</p>
+             <p>Visibility: {item.visibility} km</p>              
+             <p className="weather-condition">{item.condition}</p>
+           </div>
+           
             ))}
           </div>
 
-          {/* Pagination Controls */}
           <div className="pagination-controls">
             <button
               onClick={handlePreviousPage}
@@ -152,6 +149,7 @@ const WeatherForecast: React.FC = () => {
             >
               Next
             </button>
+          </div>
           </div>
         </>
       )}

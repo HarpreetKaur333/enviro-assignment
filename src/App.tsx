@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WeatherForecast from "./components/WeatherForecast";
 import "./App.css";
-import JSONVisualizer from "./JSONVisualizer/JSONVisualizer";
+// import JSONVisualizer from "./JSONVisualizer/JSONVisualizer";
 
 const App: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const App: React.FC = () => {
         <div className="app-container">
           <WeatherForecast />
         </div>
-
+{/* 
         <div className="separator">
           <hr />
           <p>Explore JSON Visualization Below</p>
@@ -20,7 +20,7 @@ const App: React.FC = () => {
   
         <div className="json-container">
           <JSONVisualizer />
-        </div>
+        </div> */}
         <Footer />
       </>
     
