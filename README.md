@@ -8,11 +8,12 @@ This project (Assignment Code) is a simple weather forecast and JSON visualizati
 -**Vite**: Preferred for fast builds and a smooth development experience.
 -**OpenWeatherMap API**: Provides reliable weather data.
 
-_**1. Get weather forecasts for a city using the OpenWeatherMap API. **_
-  -5-Day / 3-Hour Forecast using Free API https://openweathermap.org/forecast5
-  -Search for weather data for any city.
-  -Displays a 5-day weather forecast with key details like temperature and conditions.
-  -Filter based on periods like morning, evening, and midnight
+_**1. Get weather forecasts for a city using the OpenWeatherMap API.**_  
+- 5-Day / 3-Hour Forecast using Free API [OpenWeatherMap Forecast](https://openweathermap.org/forecast5)  
+- Search for weather data for any city.  
+- Displays a 5-day weather forecast with key details like temperature and conditions.  
+- Filter based on periods like morning, evening, and midnight.  
+
 
  API Integration: Weather data (weatherApi.ts) is fetched from the OpenWeatherMap API using Axios. API-related logic is organized in src/api/weatherApi.ts.
  Components: Header and Footer are reusable components for the application layout. WeatherForecast (WeatherForecast.tsx) handles the weather functionality, including search, display, and error handling.
@@ -43,7 +44,7 @@ Steps to Deploy**
   -Open the vite.config.ts file and ensure the base is set to the repository name: for example, in my case _ **base: '/enviro-assignment/' **_
   -Build the project: npm run build
   -Deploy to GitHub Pages using the gh-pages package: npm run deploy
-  -Go to your repository settings on GitHub: Setiings->Pages , Under the source select "gh-pages" as Branch
+  -Go to your repository settings on GitHub: Settings->Pages , Under the source select "gh-pages" as Branch
   -the project will be live at : **https://HarpreetKaur333.github.io/enviro-assignment/**
 
 readme file 
