@@ -45,12 +45,13 @@ This project is designed to focus on clarity and usability, making it a great le
  - Start the Development Server: npm run dev
 - Open your browser and navigate to http://localhost:3000
 
-**_- **Deployment to GitHub Pages
-- Steps to Deploy**_**
-  - Open the vite.config.ts file and ensure the base is set to the repository name: for example, in my case _ **base: '/enviro-assignment/' **_
-  - Build the project: npm run build
-  - Deploy to GitHub Pages using the gh-pages package: npm run deploy
-  - Go to your repository settings on GitHub: Settings->Pages , Under the source select "gh-pages" as Branch
-  - the project will be live at : **https://HarpreetKaur333.github.io/enviro-assignment/**
+**_Deployment to GitHub Pages_**  
+
+**Steps to Deploy**:  
+- Open the `vite.config.ts` file and ensure the `base` is set to the repository name.  
+  For example, in my case:  
+  ```ts
+  base: '/enviro-assignment/'
+
 
 
