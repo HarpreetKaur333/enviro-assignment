@@ -1,7 +1,6 @@
 # React + TypeScript + Vite
 
-- Enviro-Assignment
-- This project (Assignment Code) is a simple weather forecast and JSON visualization tool built using React and TypeScript. It allows users to:
+Enviro-Assignment:This project (Assignment Code) is a simple weather forecast and JSON visualization tool built using React and TypeScript. It allows users to:
 
 -**React and TypeScript**: Used for its strong typing and component-based architecture.
 -**Axios**: Chosen for handling API requests quickly and efficiently.
