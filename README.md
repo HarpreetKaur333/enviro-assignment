@@ -53,5 +53,10 @@ This project is designed to focus on clarity and usability, making it a great le
   ```ts
   base: '/enviro-assignment/'
 
+ -  Build the project: npm run build
+  -  Deploy to GitHub Pages using the gh-pages package: npm run deploy
+  -  Go to your repository settings on GitHub: Settings->Pages , Under the source select "gh-pages" as Branch
+  -  the project will be live at : **https://HarpreetKaur333.github.io/enviro-assignment/**
+
 
 
