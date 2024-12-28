@@ -15,9 +15,9 @@ _**1. Get weather forecasts for a city using the OpenWeatherMap API.**_
 - Filter based on periods like morning, evening, and midnight.  
 
 
- API Integration: Weather data (weatherApi.ts) is fetched from the OpenWeatherMap API using Axios. API-related logic is organized in src/api/weatherApi.ts.
- Components: Header and Footer are reusable components for the application layout. WeatherForecast (WeatherForecast.tsx) handles the weather functionality, including search, display, and error handling.
- Interfaces: Defined in src/interface/ for strong typing (e.g., WeatherEntry.ts).
+ -API Integration: Weather data (weatherApi.ts) is fetched from the OpenWeatherMap API using Axios. API-related logic is organized in src/api/weatherApi.ts.
+ -Components: Header and Footer are reusable components for the application layout. WeatherForecast (WeatherForecast.tsx) handles the weather functionality, including search, display, and error handling.
+ -Interfaces: Defined in src/interface/ for strong typing (e.g., WeatherEntry.ts).
 
 
 **_2. Visualize and validate JSON data in a hierarchical, collapsible structure._**
@@ -39,8 +39,8 @@ This project is designed to focus on clarity and usability, making it a great le
  - Start the Development Server: npm run dev
 - Open your browser and navigate to http://localhost:3000
 
-- **Deployment to GitHub Pages
-- Steps to Deploy**
+**_- **Deployment to GitHub Pages
+- Steps to Deploy**_**
   - Open the vite.config.ts file and ensure the base is set to the repository name: for example, in my case _ **base: '/enviro-assignment/' **_
   - Build the project: npm run build
   - Deploy to GitHub Pages using the gh-pages package: npm run deploy
