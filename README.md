@@ -25,14 +25,6 @@ _**1. Get weather forecasts for a city using the OpenWeatherMap API.**_
 - **Interfaces**: Defined in `src/interface/` for strong typing (e.g., `WeatherEntry.ts`).  
 
 
-
-**_2. Visualize and validate JSON data in a hierarchical, collapsible structure._**
- - JSONVisualizer (Component JSONVisualizer.tsx) allows users to upload, validate, and view JSON data hierarchically.
- - Paste or upload JSON data to view it in a collapsible format.
- - Validates JSON and displays error messages for invalid input.
-
-
-
 This project is designed to focus on clarity and usability, making it a great learning experience for developers.
 
 - **Deployment to GitHub Pages
