@@ -42,6 +42,13 @@ const WeatherForecast: React.FC = () => {
       } else {
         setError("Failed to fetch weather data.");
       }
+
+
+      // Edge Cases i forget to clear data if cirt is invaild 
+    setForecastData([]);
+    setFilteredData([]);
+      
+
     }
   };
 
@@ -131,6 +138,7 @@ const WeatherForecast: React.FC = () => {
            
             ))}
           </div>
+     
 
           <div className="pagination-controls">
             <button
