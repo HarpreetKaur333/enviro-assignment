@@ -25,14 +25,6 @@ _**1. Get weather forecasts for a city using the OpenWeatherMap API.**_
 - **Interfaces**: Defined in `src/interface/` for strong typing (e.g., `WeatherEntry.ts`).  
 
 
-
-**_2. Visualize and validate JSON data in a hierarchical, collapsible structure._**
- - JSONVisualizer (Component JSONVisualizer.tsx) allows users to upload, validate, and view JSON data hierarchically.
- - Paste or upload JSON data to view it in a collapsible format.
- - Validates JSON and displays error messages for invalid input.
-
-
-
 This project is designed to focus on clarity and usability, making it a great learning experience for developers.
 
 - **Deployment to GitHub Pages
@@ -57,6 +49,11 @@ This project is designed to focus on clarity and usability, making it a great le
   -  Deploy to GitHub Pages using the gh-pages package: npm run deploy
   -  Go to your repository settings on GitHub: Settings->Pages , Under the source select "gh-pages" as Branch
   -  the project will be live at : **https://HarpreetKaur333.github.io/enviro-assignment/**
+![image](https://github.com/user-attachments/assets/9ab98faa-c830-4d50-9ebf-ba757514a19e)
+![image](https://github.com/user-attachments/assets/867f2df4-e83e-46f1-892d-a00cdee9a10f)
+![image](https://github.com/user-attachments/assets/adb2cefc-062f-4585-9f41-d60fef5921ea)
+
+
 
 
 
